@@ -1,19 +1,25 @@
 # hello-go-deploy-gae
 
+```text
+*** THE DEPLOY IS UNDER CONSTRUCTION - CHECK BACK SOON ***
+For testing the deploy, I'm using using mesos/marathon.
+```
+
 [![Go Report Card](https://goreportcard.com/badge/github.com/JeffDeCola/hello-go-deploy-gae)](https://goreportcard.com/report/github.com/JeffDeCola/hello-go-deploy-gae)
 [![GoDoc](https://godoc.org/github.com/JeffDeCola/hello-go-deploy-gae?status.svg)](https://godoc.org/github.com/JeffDeCola/hello-go-deploy-gae)
-[![Maintainability](https://api.codeclimate.com/v1/badges/?????/maintainability)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/dc7f5a341aed6ae341d0/maintainability)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/maintainability)
 [![Issue Count](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/issues)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 
 `hello-go-deploy-gae` _uses Concourse CI to test, build, push (to DockerHub)
-and deploy a long running "hello-world" Docker Image to Mesos/Marathon._
+and deploy a long running "hello-world" Docker Image to Google App Engine._
 
 I also have other repos showing different deployments,
 
 * [hello-go-deploy-aws](https://github.com/JeffDeCola/hello-go-deploy-aws)
 * [hello-go-deploy-azure](https://github.com/JeffDeCola/hello-go-deploy-azure)
 * [hello-go-deploy-gce](https://github.com/JeffDeCola/hello-go-deploy-gce)
+* [hello-go-deploy-marathon](https://github.com/JeffDeCola/hello-go-deploy-marathon)
 
 The `hello-go-deploy-gae`
 [Docker Image](https://hub.docker.com/r/jeffdecola/hello-go-deploy-gae)
