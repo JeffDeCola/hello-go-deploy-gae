@@ -42,10 +42,9 @@ To push a docker image you will need,
 
 * [DockerHub account](https://hub.docker.com/)
 
-To deploy to mesos/marathon you will need,
+To deploy to gae you will need,
 
-* [marathon](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/operations-tools/orchestration/cluster-managers-resource-management-scheduling/marathon-cheat-sheet)
-* [mesos](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/operations-tools/orchestration/cluster-managers-resource-management-scheduling/mesos-cheat-sheet)
+* [google app engine (gae)](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/infrastructure-as-a-service/cloud-services-compute/google-cloud-platform-cheat-sheet/google-app-engine.md),
 
 As a bonus, you can use Concourse CI to run the scripts,
 
