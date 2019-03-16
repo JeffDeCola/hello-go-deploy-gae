@@ -12,7 +12,7 @@ For testing the deploy, I'm using using mesos/marathon.
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 
 `hello-go-deploy-gae` _uses Concourse CI to test, build, push (to DockerHub)
-and deploy a long running "hello-world" Docker Image to Google App Engine._
+and deploy a long running "hello-world" Docker Image to Google App Engine (gae)._
 
 I also have other repos showing different deployments,
 
@@ -44,7 +44,7 @@ To push a docker image you will need,
 
 To deploy to gae you will need,
 
-* [google app engine (gae)](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/infrastructure-as-a-service/cloud-services-compute/google-cloud-platform-cheat-sheet/google-app-engine.md),
+* [google app engine (gae)](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/infrastructure-as-a-service/cloud-services-compute/google-cloud-platform-cheat-sheet/google-app-engine.md)
 
 As a bonus, you can use Concourse CI to run the scripts,
 
