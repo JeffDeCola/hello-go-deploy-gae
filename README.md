@@ -155,25 +155,23 @@ This script runs the above commands
 This script runs the above commands in concourse
 [/ci/scripts/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/build-push.sh).
 
-## STEP 4 - DEPLOY (TO MARATHON)
+## STEP 4 - DEPLOY (TO GAE)
 
-Lets pull the `hello-go-deploy-gae` docker image
-from DockerHub and deploy to mesos/marathon.
+Refer to my
+[gae cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/blob/master/software/infrastructure-as-a-service/cloud-services-compute/google-cloud-platform-cheat-sheet/google-app-engine.md),
+for more detailed information and a nice illustration.
 
-This is actually very simple, you just PUT the
-[/deploy/app.json](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/deploy/app.json)
-file to mesos/marathon. This json file tells marathon what to do.
+The goal is to deploy a ??? from a ???.
 
-```bash
-curl -X PUT http://10.141.141.10:8080/v2/apps/hello-go-long-running \
--d @app.json \
--H "Content-type: application/json"
-```
+There are ?? steps to deployment on gae,
 
-This script runs the above commands
-[/deploy/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/deploy/deploy.sh).
+* tbd
+* tbd
 
-This script runs the above commands in concourse
+This script ???
+[/gae-deploy/????.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/gae-deploy/???.sh).
+
+Lastly, this script runs all of the above commands in concourse
 [/ci/scripts/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/deploy.sh).
 
 ## TEST, BUILT, PUSH & DEPLOY USING CONCOURSE (OPTIONAL)
