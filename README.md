@@ -18,7 +18,7 @@ I also have other repos showing different deployments,
 
 * [hello-go-deploy-aws](https://github.com/JeffDeCola/hello-go-deploy-aws)
 * [hello-go-deploy-azure](https://github.com/JeffDeCola/hello-go-deploy-azure)
-* hello-go-deploy-gae <- you are here!!
+* hello-go-deploy-gae <- You are here!
 * [hello-go-deploy-gce](https://github.com/JeffDeCola/hello-go-deploy-gce)
 * [hello-go-deploy-gke](https://github.com/JeffDeCola/hello-go-deploy-gke)
 * [hello-go-deploy-marathon](https://github.com/JeffDeCola/hello-go-deploy-marathon)
@@ -46,7 +46,7 @@ To push a docker image you will need,
 
 To deploy to gae you will need,
 
-* [google app engine (gae)](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/infrastructure-as-a-service/cloud-services-compute/google-cloud-platform-cheat-sheet/google-app-engine.md)
+* [google app engine (gae)](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/platform-as-a-service/cloud-services-app/google-cloud-platform-cheat-sheet/google-app-engine.md)
 
 As a bonus, you can use Concourse CI to run the scripts,
 
