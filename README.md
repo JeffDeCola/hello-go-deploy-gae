@@ -53,11 +53,23 @@ As a bonus, you can use Concourse CI to run the scripts,
 * [concourse](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/operations-tools/continuous-integration-continuous-deployment/concourse-cheat-sheet)
   (Optional)
 
-## RUN
+## EXAMPLES
 
-To run from the command line,
+There are a few examples in this repo.
+
+* [EXAMPLE 1](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-01-app)
+  A simple hello world website.
+* [EXAMPLE 2](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-02-app)
+  Static pages using gcloud.
+* [EXAMPLE 3](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03-app)
+  Service????
+
+## RUN EXAMPLE 3
+
+To run from the command line, ??????
 
 ```bash
+cd example-03-app
 go run main.go
 ```
 
