@@ -188,6 +188,16 @@ This script ???
 Lastly, this script runs all of the above commands in concourse
 [/ci/scripts/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/deploy.sh).
 
+## CHECK THAT hello-go is RUNNING IN APP ENGINE
+
+tbd
+
+## A HIGH LEVEL VIEW OF GAE
+
+Here is an illustration how everything fits together.
+
+![IMAGE -  google compute engine creating deploying custom image - IMAGE](https://github.com/JeffDeCola/my-cheat-sheets/blob/master/docs/pics/gae-app-service-view.jpg)
+
 ## TEST, BUILT, PUSH & DEPLOY USING CONCOURSE (OPTIONAL)
 
 For fun, I use concourse to automate the above steps.
