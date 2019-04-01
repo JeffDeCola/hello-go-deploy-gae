@@ -1,8 +1,9 @@
 # hello-go-deploy-gae app.yaml
 
-runtime: go
-api_version: go1
+runtime: go111
+
+service: example-01-app
 
 handlers:
 - url: /.*
-  script: _go_app
+  script: auto
