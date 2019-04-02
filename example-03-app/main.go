@@ -19,6 +19,14 @@ type Counter struct {
 
 var counter = &Counter{}
 
+// Result
+func (c *Counter) Result() int {
+	c.lock.Lock()
+	count := c.sum
+	c.lock.Unlock()
+	return count
+}
+
 // addThis adds
 func (c *Counter) addThis(i int) {
 	c.lock.Lock()
@@ -48,5 +56,5 @@ func main() {
 
 func handleJeff(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "Hello, world! - Example 03")
-	fmt.Fprintln(w, "The current count is", counter.sum)
+	fmt.Fprintln(w, "The current count is", counter.Result())
 }
