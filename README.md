@@ -66,10 +66,15 @@ You can deploy it locally,
 
 ```bash
 sh deploy-local-app-server.sh
+```
+
+And see the webpage,
+
+```bash
 [http://localhost:8080](http://localhost:8080)
 ```
 
-You can deploy it to gae,
+You can also deploy it to gae,
 
 ```bash
 sh deploy-gae.sh
@@ -82,27 +87,17 @@ is static pages using gcloud.
 
 ### EXAMPLE 3
 
-[example-03-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03-gae)
+When a user click on webpage for [example-03-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03-gae),
+It will show the latest number from a counter.
 
-### EXAMPLE 4
-
-[example-03-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03-gae)
-
-To run from the command line, ??????
+For example,
 
 ```bash
-cd example-03-app
-go run main.go
+Hello, world! - Example 03
+The current count is 39
 ```
 
-Every 2 seconds `hello-go-deploy-gae` will print:
-
-```bash
-Hello everyone, count is: 1
-Hello everyone, count is: 2
-Hello everyone, count is: 3
-etc...
-```
+Lets deploy example 3.
 
 ## STEP 1 - TEST
 
@@ -118,101 +113,26 @@ This script runs the above command
 This script runs the above command in concourse
 [/ci/scripts/unit-test.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/unit-tests.sh).
 
-## STEP 2 - BUILD (DOCKER IMAGE)
-
-Lets build a docker image from your binary `/bin/hello-go`.
-
-First, create a binary `hello-go`,
-I keep my binaries in `/bin`.
-
-```bash
-go build -o bin/hello-go main.go
-```
-
-Copy the binary to `/build-push` because docker needs it in
-same directory as Dockerfile,
-
-```bash
-cp bin/hello-go build-push/.
-cd build-push
-```
-
-Build your docker image from binary `hello-go`
-using `Dockerfile`,
-
-```bash
-docker build -t jeffdecola/hello-go-deploy-gae .
-```
-
-Obviously, replace `jeffdecola` with your DockerHub username.
-
-Check your docker images on your machine,
-
-```bash
-docker images
-```
-
-It will be listed as `jeffdecola/hello-go-deploy-gae`
-
-You can test your dockerhub image,
-
-```bash
-docker run jeffdecola/hello-go-deploy-gae
-```
-
-This script runs the above commands
-[/build-push/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/build-push/build-push.sh).
-
-This script runs the above commands in concourse
-[/ci/scripts/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/build-push.sh).
-
-## STEP 3 - PUSH (TO DOCKERHUB)
-
-Lets push your docker image to DockerHub.
-
-If you are not logged in, you need to login to dockerhub,
-
-```bash
-docker login
-```
-
-Once logged in you can push,
-
-```bash
-docker push jeffdecola/hello-go-deploy-gae
-```
-
-Check you image at DockerHub. My image is located
-[https://hub.docker.com/r/jeffdecola/hello-go-deploy-gae](https://hub.docker.com/r/jeffdecola/hello-go-deploy-gae).
-
-This script runs the above commands
-[/build-push/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/build-push/build-push.sh).
-
-This script runs the above commands in concourse
-[/ci/scripts/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/build-push.sh).
-
-## STEP 4 - DEPLOY (TO GAE)
+## STEP 2 - DEPLOY (TO GAE)
 
 Refer to my
 [gae cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/blob/master/software/infrastructure-as-a-service/cloud-services-compute/google-cloud-platform-cheat-sheet/google-app-engine.md),
 for more detailed information and a nice illustration.
 
-The goal is to deploy a ??? from a ???.
-
-There are ?? steps to deployment on gae,
-
-* tbd
-* tbd
-
-This script ???
-[/gae-deploy/????.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/gae-deploy/???.sh).
+This script is
+[example-03-gae/deploy-gae.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/gae-deploy/example-03-gae/deploy-gae.sh).
 
 Lastly, this script runs all of the above commands in concourse
 [/ci/scripts/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/deploy.sh).
 
 ## CHECK THAT hello-go is RUNNING IN APP ENGINE
 
-tbd
+Goto the console in gae or,
+
+```bash
+gcloud app logs tail -s example-01-app
+gcloud app browse
+```
 
 ## A HIGH LEVEL VIEW OF GAE
 

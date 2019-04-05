@@ -17,16 +17,28 @@ else
     echo " "
 fi
 
-echo "The goal is to send the app.json file to marathon"
-echo "This is done in the marathon resource"
+echo "At start, you should be in a /tmp/build/xxxxx directory with one folder:"
+echo "   /hello-go-deploy-gae"
 echo " "
 
-# List whats in the app.json file
-echo "List whats in the app.json file"
-cat hello-go-deploy-gae/example-01-gce/deploy-gce/app.json
+echo "pwd is: $PWD"
 echo " "
 
-echo "The concourse pipeline will put app.json to mesos/marathon"
+echo "List whats in the current directory"
+ls -la
+echo " "
+
+echo "cd example-03-gae"
+cd example-03-gae
+echo " "
+
+echo "DEPLOY APP TO GAE"
+echo " "
+echo "      gcloud app browse"
+echo "      gcloud app logs tail -s example-01-app"
+echo "      gcloud app browse -s example-01-app"
+echo " "
+gcloud app deploy app.yaml
 echo " "
 
 echo "deploy.sh (END)"
