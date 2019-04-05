@@ -40,8 +40,8 @@ mkdir -p src/github.com/JeffDeCola/
 cp -R ./hello-go-deploy-gae src/github.com/JeffDeCola/.
 echo " "
 
-echo "cd src/github.com/JeffDeCola/hello-go-deploy-gae"
-cd src/github.com/JeffDeCola/hello-go-deploy-gae
+echo "cd src/github.com/JeffDeCola/hello-go-deploy-gae/example-01-gce"
+cd src/github.com/JeffDeCola/hello-go-deploy-gae/example-01-gce
 echo " "
 
 echo "Check that you are set and everything is in the right place for go:"
@@ -58,11 +58,11 @@ cd "$GOPATH/dist"
 echo " "
 
 echo "cp the binary into /dist"
-cp "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-gae/bin/hello-go" .
+cp "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-gae/example-01-gce/bin/hello-go" .
 echo " "
 
 echo "cp the Dockerfile into /dist"
-cp "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-gae/build-push/Dockerfile" .
+cp "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-gae/example-01-gce/build-push/Dockerfile" .
 echo " "
 
 echo "List whats in the /dist directory"
