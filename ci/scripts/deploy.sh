@@ -21,6 +21,14 @@ echo "At start, you should be in a /tmp/build/xxxxx directory with one folder:"
 echo "   /hello-go-deploy-gae"
 echo " "
 
+echo "Write credential.json file to /root from preset $GOOGLE_APPLICATION_CREDENTIALS_FILE"
+echo "$GOOGLE_APPLICATION_CREDENTIALS_FILE" | base64 -d > /root/google-credentials.json
+
+echo "Set $GOOGLE_APPLICATION_CREDENTIALS (file location) env variable"
+export GOOGLE_APPLICATION_CREDENTIALS="/root/google-credentials.json"
+
+echo " "
+
 echo "pwd is: $PWD"
 echo " "
 
@@ -28,8 +36,8 @@ echo "List whats in the current directory"
 ls -la
 echo " "
 
-echo "cd example-03-gae"
-cd example-03-gae
+echo "cd hello-go-deploy-gae/example-03-gae"
+cd hello-go-deploy-gae/example-03-gae
 echo " "
 
 echo "DEPLOY APP TO GAE"
