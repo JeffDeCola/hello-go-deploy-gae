@@ -21,12 +21,30 @@ echo "At start, you should be in a /tmp/build/xxxxx directory with one folder:"
 echo "   /hello-go-deploy-gae"
 echo " "
 
+echo "PRESTEPS"
+echo " "
+
+echo "Note: $GOOGLE_JEFFS_PROJECT_ID AND $GOOGLE_SERVICE_ACCOUNT_EMAIL_ADDRESS env variable already preset"
+echo " "
+
 echo "Write credential.json file to /root from preset $GOOGLE_APPLICATION_CREDENTIALS_FILE"
 echo "$GOOGLE_APPLICATION_CREDENTIALS_FILE" | base64 -d > /root/google-credentials.json
 
 echo "Set $GOOGLE_APPLICATION_CREDENTIALS (file location) env variable"
 export GOOGLE_APPLICATION_CREDENTIALS="/root/google-credentials.json"
+echo " "
 
+echo "gcloud auth"
+echo gcloud auth activate-service-account "$GOOGLE_SERVICE_ACCOUNT_EMAIL_ADDRESS" --key-file "$GOOGLE_APPLICATION_CREDENTIALS"
+gcloud auth activate-service-account "$GOOGLE_SERVICE_ACCOUNT_EMAIL_ADDRESS" --key-file "$GOOGLE_APPLICATION_CREDENTIALS"
+echo " "
+
+echo "gcloud config set project $GOOGLE_JEFFS_PROJECT_ID"
+gcloud config set project "$GOOGLE_JEFFS_PROJECT_ID"
+echo " "
+
+echo "cd hello-go-deploy-gae/example-03-gae"
+cd hello-go-deploy-gae/example-03-gae
 echo " "
 
 echo "pwd is: $PWD"
@@ -36,15 +54,19 @@ echo "List whats in the current directory"
 ls -la
 echo " "
 
-echo "cd hello-go-deploy-gae/example-03-gae"
-cd hello-go-deploy-gae/example-03-gae
+echo "gcloud version"
+gcloud version
+echo " "
+
+echo "gcloud components list"
+gcloud components list
 echo " "
 
 echo "DEPLOY APP TO GAE"
 echo " "
 echo "      gcloud app browse"
-echo "      gcloud app logs tail -s example-01-app"
-echo "      gcloud app browse -s example-01-app"
+echo "      gcloud app logs tail -s example-03-app"
+echo "      gcloud app browse -s example-03-app"
 echo " "
 gcloud app deploy app.yaml
 echo " "
