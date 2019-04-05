@@ -1,9 +1,0 @@
-# hello-go-deploy-gae app.yaml
-
-runtime: go111
-
-service: example-01-app
-
-handlers:
-- url: /.*
-  script: auto

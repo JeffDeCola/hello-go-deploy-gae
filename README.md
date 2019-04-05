@@ -55,16 +55,38 @@ As a bonus, you can use Concourse CI to run the scripts,
 
 ## EXAMPLES
 
-There are a few examples in this repo.
+There are a few examples in this repo.  We will deploy example example 3.
 
-* [EXAMPLE 1](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-01-app)
-  A simple hello world website.
-* [EXAMPLE 2](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-02-app)
-  Static pages using gcloud.
-* [EXAMPLE 3](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03-app)
-  Service????
+### EXAMPLE 1
 
-## RUN EXAMPLE 3
+[example-01-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-01-gae)
+is a simple hello world website.
+
+You can deploy it locally,
+
+```bash
+sh deploy-local-app-server.sh
+[http://localhost:8080](http://localhost:8080)
+```
+
+You can deploy it to gae,
+
+```bash
+sh deploy-gae.sh
+```
+
+### EXAMPLE 2
+
+[example-02-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-02-gae)
+is static pages using gcloud.
+
+### EXAMPLE 3
+
+[example-03-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03-gae)
+
+### EXAMPLE 4
+
+[example-03-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03-gae)
 
 To run from the command line, ??????
 
