@@ -85,6 +85,8 @@ jobs:
       file: hello-go-deploy-gae/ci/tasks/task-deploy.yml
       params:
         GOOGLE_APPLICATION_CREDENTIALS_FILE: {{google_application_credentials_file}}
+        GOOGLE_JEFFS_PROJECT_ID: {{google_jeffs_project_id}}
+        GOOGLE_SERVICE_ACCOUNT_EMAIL_ADDRESS: {{google_service_account_email_address}}
       on_success:
         do:
         - put: resource-slack-alert
