@@ -15,29 +15,58 @@ To push a docker image you will need,
 
 To deploy to gae you will need,
 
-* [google app engine (gae)](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/infrastructure-as-a-service/cloud-services-compute/google-cloud-platform-cheat-sheet/google-app-engine.md)
+* [google app engine (gae)](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/platform-as-a-service/cloud-services-app/google-cloud-platform-cheat-sheet/google-app-engine.md)
 
 As a bonus, you can use Concourse CI to run the scripts,
 
 * [concourse](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/operations-tools/continuous-integration-continuous-deployment/concourse-cheat-sheet)
   (Optional)
 
-## RUN
+## EXAMPLES
 
-To run from the command line,
+There are a few examples in this repo.  We will deploy example example 3.
+
+### EXAMPLE 1
+
+[example-01-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-01-gae)
+is a simple hello world website.
+
+You can deploy it locally,
 
 ```bash
-go run main.go
+sh deploy-local-app-server.sh
 ```
 
-Every 2 seconds `hello-go-deploy-gae` will print:
+And see the webpage,
 
 ```bash
-Hello everyone, count is: 1
-Hello everyone, count is: 2
-Hello everyone, count is: 3
-etc...
+[http://localhost:8080](http://localhost:8080)
 ```
+
+You can also deploy it to gae,
+
+```bash
+sh deploy-gae.sh
+```
+
+### EXAMPLE 2
+
+[example-02-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-02-gae)
+is static pages using gcloud.
+
+### EXAMPLE 3
+
+When a user click on webpage for [example-03-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03-gae),
+It will show the latest number from a counter.
+
+For example,
+
+```bash
+Hello, world! - Example 03
+The current count is 39
+```
+
+Lets deploy example 3.
 
 ## STEP 1 - TEST
 
@@ -53,99 +82,32 @@ This script runs the above command
 This script runs the above command in concourse
 [/ci/scripts/unit-test.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/unit-tests.sh).
 
-## STEP 2 - BUILD (DOCKER IMAGE)
+## STEP 2 - DEPLOY (TO GAE)
 
-Lets build a docker image from your binary `/bin/hello-go`.
+Refer to my
+[gae cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/blob/master/software/infrastructure-as-a-service/cloud-services-compute/google-cloud-platform-cheat-sheet/google-app-engine.md),
+for more detailed information and a nice illustration.
 
-First, create a binary `hello-go`,
-I keep my binaries in `/bin`.
+This script is
+[example-03-gae/deploy-gae.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/gae-deploy/example-03-gae/deploy-gae.sh).
 
-```bash
-go build -o bin/hello-go main.go
-```
-
-Copy the binary to `/build-push` because docker needs it in
-same directory as Dockerfile,
-
-```bash
-cp bin/hello-go build-push/.
-cd build-push
-```
-
-Build your docker image from binary `hello-go`
-using `Dockerfile`,
-
-```bash
-docker build -t jeffdecola/hello-go-deploy-gae .
-```
-
-Obviously, replace `jeffdecola` with your DockerHub username.
-
-Check your docker images on your machine,
-
-```bash
-docker images
-```
-
-It will be listed as `jeffdecola/hello-go-deploy-gae`
-
-You can test your dockerhub image,
-
-```bash
-docker run jeffdecola/hello-go-deploy-gae
-```
-
-This script runs the above commands
-[/build-push/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/build-push/build-push.sh).
-
-This script runs the above commands in concourse
-[/ci/scripts/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/build-push.sh).
-
-## STEP 3 - PUSH (TO DOCKERHUB)
-
-Lets push your docker image to DockerHub.
-
-If you are not logged in, you need to login to dockerhub,
-
-```bash
-docker login
-```
-
-Once logged in you can push,
-
-```bash
-docker push jeffdecola/hello-go-deploy-gae
-```
-
-Check you image at DockerHub. My image is located
-[https://hub.docker.com/r/jeffdecola/hello-go-deploy-gae](https://hub.docker.com/r/jeffdecola/hello-go-deploy-gae).
-
-This script runs the above commands
-[/build-push/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/build-push/build-push.sh).
-
-This script runs the above commands in concourse
-[/ci/scripts/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/build-push.sh).
-
-## STEP 4 - DEPLOY (TO MARATHON)
-
-Lets pull the `hello-go-deploy-gae` docker image
-from DockerHub and deploy to mesos/marathon.
-
-This is actually very simple, you just PUT the
-[/deploy/app.json](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/deploy/app.json)
-file to mesos/marathon. This json file tells marathon what to do.
-
-```bash
-curl -X PUT http://10.141.141.10:8080/v2/apps/hello-go-long-running \
--d @app.json \
--H "Content-type: application/json"
-```
-
-This script runs the above commands
-[/deploy/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/deploy/deploy.sh).
-
-This script runs the above commands in concourse
+Lastly, this script runs all of the above commands in concourse
 [/ci/scripts/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/deploy.sh).
+
+## CHECK THAT hello-go is RUNNING IN APP ENGINE
+
+Goto the console in gae or,
+
+```bash
+gcloud app logs tail -s example-01-app
+gcloud app browse
+```
+
+## A HIGH LEVEL VIEW OF GAE
+
+Here is an illustration how everything fits together.
+
+![IMAGE -  google compute engine creating deploying custom image - IMAGE](https://github.com/JeffDeCola/my-cheat-sheets/blob/master/docs/pics/gae-app-service-view.jpg)
 
 ## TEST, BUILT, PUSH & DEPLOY USING CONCOURSE (OPTIONAL)
 
