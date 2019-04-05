@@ -1,31 +1,35 @@
-#!/bin/sh
-# hello-go-deploy-gae unit-test.sh
+#!/bin/sh -e
+# hello-go-deploy-gae unit-tests.sh
 
 echo " "
 
 if [ "$1" = "-debug" ]
 then
-    echo "unit-tests.sh -debug (START)"
-    echo " "
+    echo "************************************************************************"
+    echo "* unit-tests.sh -debug (START) *****************************************"
+    echo "************************************************************************"
     # set -x enables a mode of the shell where all executed commands are printed to the terminal.
     set -x
     echo " "
 else
-    echo " "
-    echo "unit-tests.sh (START)"
+    echo "************************************************************************"
+    echo "* unit-tests.sh (START) ************************************************"
+    echo "************************************************************************"
     echo " "
 fi
 
-echo "cd up"
+echo "cd up to code"
 cd ..
 echo " "
 
-echo "Run go test -cover"
+echo "go test -cover"
 echo "   -cover shows the percentage coverage"
 echo "   Put results in /test/test_coverage.txt file"
 echo " "
 go test -cover ./... | tee test/test_coverage.txt
 echo " "
 
-echo "unit-tests.sh (END)"
+echo "************************************************************************"
+echo "* unit-tests.sh (END) **************************************************"
+echo "************************************************************************"
 echo " "

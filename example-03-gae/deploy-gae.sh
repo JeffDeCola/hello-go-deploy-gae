@@ -1,8 +1,22 @@
-#!/bin/sh
+#!/bin/sh -e 
 # hello-go-deploy-gae deploy-gae.sh
 
-echo "deploy-gae.sh (END)"
 echo " "
+
+if [ "$1" = "-debug" ]
+then
+    echo "************************************************************************"
+    echo "* deploy-gae.sh -debug (START) *****************************************"
+    echo "************************************************************************"
+    # set -x enables a mode of the shell where all executed commands are printed to the terminal.
+    set -x
+    echo " "
+else
+    echo "************************************************************************"
+    echo "* deploy-gae.sh (START) ************************************************"
+    echo "************************************************************************"
+    echo " "
+fi
 
 echo "DEPLOY APP TO GAE"
 echo " "
@@ -13,5 +27,7 @@ echo " "
 gcloud app deploy app.yaml
 echo " "
 
-echo "deploy-gae.sh (END)"
+echo "************************************************************************"
+echo "* deploy-gae.sh (END) **************************************************"
+echo "************************************************************************"
 echo " "

@@ -1,9 +1,22 @@
-#!/bin/sh
-# hello-go-deploy-gae test-on-local-server.sh
+#!/bin/sh -e 
+# hello-go-deploy-gaedeploy-local-app-server.sh
 
 echo " "
-echo "test-on-local-server.sh (END)"
-echo " "
+
+if [ "$1" = "-debug" ]
+then
+    echo "************************************************************************"
+    echo "*deploy-local-app-server.sh -debug (START) *****************************"
+    echo "************************************************************************"
+    # set -x enables a mode of the shell where all executed commands are printed to the terminal.
+    set -x
+    echo " "
+else
+    echo "************************************************************************"
+    echo "*deploy-local-app-server.sh (START) ************************************"
+    echo "************************************************************************"
+    echo " "
+fi
 
 echo "KICK OFF APP ON YOUR LOCAL SERVER using Googles Local App server dev_appserver.py"
 echo " "
@@ -15,5 +28,7 @@ echo " "
 dev_appserver.py app.yaml
 echo " "
 
-echo "test-on-local-server.sh (END)"
+echo "************************************************************************"
+echo "*deploy-local-app-server.sh (END) **************************************"
+echo "************************************************************************"
 echo " "
