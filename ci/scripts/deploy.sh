@@ -66,12 +66,13 @@ ls -la
 echo " "
 
 echo "DEPLOY APP TO GAE"
+echo "gcloud -q app deploy app.yaml --stop-previous-version"
 echo " "
 echo "      gcloud app browse"
 echo "      gcloud app logs tail -s example-03-app"
 echo "      gcloud app browse -s example-03-app"
 echo " "
-gcloud app deploy app.yaml --stop-previous-version
+gcloud -q app deploy app.yaml --stop-previous-version
 echo " "
 
 echo "deploy.sh (END)"
