@@ -18,13 +18,17 @@ else
     echo " "
 fi
 
+echo "gcloud config list"
+gcloud config list
+echo " "
+
 echo "DEPLOY APP TO GAE"
 echo " "
 echo "      gcloud app browse"
 echo "      gcloud app logs tail -s example-01-app"
 echo "      gcloud app browse -s example-01-app"
 echo " "
-gcloud app deploy app.yaml
+gcloud app deploy app.yaml --stop-previous-version
 echo " "
 
 echo "************************************************************************"

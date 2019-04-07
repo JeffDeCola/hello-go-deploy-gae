@@ -18,6 +18,10 @@ else
     echo " "
 fi
 
+echo "gcloud config list"
+gcloud config list
+echo " "
+
 echo "DEPLOY APP TO GAE"
 echo " "
 echo "      gcloud app browse"
