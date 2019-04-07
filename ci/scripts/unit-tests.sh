@@ -32,6 +32,10 @@ echo " "
 echo "pwd is: $PWD"
 echo " "
 
+echo "export START_DIRECTORY=$PWD"
+export START_DIRECTORY="$PWD"
+echo " "
+
 echo "List whats in the current directory"
 ls -la
 echo " "
@@ -69,7 +73,7 @@ echo "The test_coverage.txt file will be used by the concourse pipeline to send 
 echo " "
 
 echo "Move text_coverage.txt to /coverage-results directory"
-mv "test/test_coverage.txt" "$GOPATH/coverage-results/"
+mv "test/test_coverage.txt" "$START_DIRECTORY/coverage-results/"
 echo " "
 
 echo "unit-tests.sh (END)"
