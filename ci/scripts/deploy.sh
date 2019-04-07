@@ -54,8 +54,16 @@ echo "gcloud config list"
 gcloud config list
 echo " "
 
-echo "cd hello-go-deploy-gae/example-03-gae"
-cd hello-go-deploy-gae/example-03-gae
+echo "mkdir /root/src/github.com/JeffDeCola"
+mkdir /root/src/github.com/JeffDeCola
+echo " "
+
+echo "mv hello-go-deploy-gae /root/src/github.com/JeffDeCola/."
+mv hello-go-deploy-gae /root/src/github.com/JeffDeCola/.
+echo " "
+
+echo "cd /root/src/github.com/JeffDeCola/hello-go-deploy-gae/example-03-gae"
+cd /root/src/github.com/JeffDeCola/hello-go-deploy-gae/example-03-gae
 echo " "
 
 echo "pwd is: $PWD"
