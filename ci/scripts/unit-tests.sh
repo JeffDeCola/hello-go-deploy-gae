@@ -34,18 +34,16 @@ echo "List whats in the current directory"
 ls -la
 echo " "
 
-echo "Setup the GOPATH based on current directory"
-export GOPATH=$PWD
+echo "mkdir -p $GOPATH/src/github.com/JeffDeCola/"
+mkdir -p "$GOPATH/src/github.com/JeffDeCola/"
 echo " "
 
-echo "Now we must move our code from the current directory ./hello-go-deploy-gae to" 
-echo "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-gae"
-mkdir -p src/github.com/JeffDeCola/
-cp -R ./hello-go-deploy-gae src/github.com/JeffDeCola/.
+echo "cp -R ./hello-go-deploy-gae $GOPATH/src/github.com/JeffDeCola/."
+cp -R "./hello-go-deploy-gae" "$GOPATH/src/github.com/JeffDeCola/."
 echo " "
 
-echo "cd src/github.com/JeffDeCola/hello-go-deploy-gae/example-03-gae"
-cd src/github.com/JeffDeCola/hello-go-deploy-gae/example-03-gae
+echo "cd $GOPATH/src/github.com/JeffDeCola/hello-go-deploy-gae/example-03-gae"
+cd "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-gae/example-03-gae"
 echo " "
 
 echo "Check that you are set and everything is in the right place for go:"
