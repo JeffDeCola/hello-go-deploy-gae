@@ -17,8 +17,6 @@ else
     echo " "
 fi
 
-echo "************************************************ gopath is: $GOPATH"
-
 echo "The goal is to set up a go src/github.com/JeffDeCola/hello-go-deploy-gae directory"
 echo "Then tests will be run in that directory"
 echo "Test coverage results, text_coverage.txt, will be moved to /coverage-results directory"
