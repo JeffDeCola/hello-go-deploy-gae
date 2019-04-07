@@ -25,8 +25,9 @@ echo " "
 echo "DEPLOY APP TO GAE"
 echo " "
 echo "      gcloud app browse"
-echo "      gcloud app logs tail -s example-01-app"
-echo "      gcloud app browse -s example-01-app"
+echo "      gcloud app logs tail -s example-04-app"
+echo "      gcloud app browse -s example-04-app"
+echo '      Webpage: https://'"$GCP_JEFFS_PROJECT_ID"'.appspot.com'
 echo " "
 gcloud app deploy app.yaml --stop-previous-version
 echo " "
