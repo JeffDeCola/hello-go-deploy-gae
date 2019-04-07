@@ -66,7 +66,12 @@ Hello, world! - Example 03
 The current count is 39
 ```
 
-Lets deploy example 3.
+### EXAMPLE 4
+
+[example-01-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-01-gae)
+is a simple hello world website docker container.
+
+tbd
 
 ## STEP 1 - TEST
 
