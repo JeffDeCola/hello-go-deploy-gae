@@ -43,16 +43,18 @@ echo "gcloud config set project $GOOGLE_JEFFS_PROJECT_ID"
 gcloud config set project "$GOOGLE_JEFFS_PROJECT_ID"
 echo " "
 
-#echo "Initialize your App Engine app with your project and choose its region"
-#echo "gcloud app create --project=$GOOGLE_JEFFS_PROJECT_ID"
-# gcloud app create --project="$GOOGLE_JEFFS_PROJECT_ID"
-#echo " "
-
-echo "gcloud services enable appengine.googleapis.com"
-gcloud services enable appengine.googleapis.com
+echo "gcloud version"
+gcloud version
 echo " "
 
-gcloud services enable [SERVICE_NAME]
+echo "gcloud components list"
+gcloud components list
+echo " "
+
+echo "gcloud projects describe $GOOGLE_JEFFS_PROJECT_ID"
+gcloud projects describe "$GOOGLE_JEFFS_PROJECT_ID"
+echo " "
+
 echo "cd hello-go-deploy-gae/example-03-gae"
 cd hello-go-deploy-gae/example-03-gae
 echo " "
@@ -62,18 +64,6 @@ echo " "
 
 echo "List whats in the current directory"
 ls -la
-echo " "
-
-echo "gcloud version"
-gcloud version
-echo " "
-
-echo "gcloud components list"
-gcloud components list
-echo " "
-
-echo "gcloud projects describe"
-gcloud projects describe
 echo " "
 
 echo "DEPLOY APP TO GAE"
