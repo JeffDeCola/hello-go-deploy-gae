@@ -4,11 +4,10 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"sync"
 	"time"
-
-	"google.golang.org/appengine"
 )
 
 // Counter is the sum and mutex.
@@ -39,7 +38,7 @@ func loopForever() {
 	var i = 1
 	for true {
 		counter.addThis(i)
-		fmt.Println("Jeff - The count is:", counter.sum)
+		// fmt.Println("Jeff - The count is:", counter.sum)
 		time.Sleep(2000 * time.Millisecond)
 	}
 }
@@ -49,8 +48,8 @@ func main() {
 	go loopForever()
 
 	http.HandleFunc("/", handleJeff)
-	appengine.Main()
-	// log.Fatal(http.ListenAndServe(":1234", nil))
+	// appengine.Main()
+	log.Fatal(http.ListenAndServe(":8080", nil))
 
 }
 
