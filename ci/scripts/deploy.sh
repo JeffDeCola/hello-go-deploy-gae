@@ -54,14 +54,21 @@ echo "gcloud config list"
 gcloud config list
 echo " "
 
-echo "cd hello-go-deploy-gae/example-03-gae"
-cd hello-go-deploy-gae/example-03-gae
+echo "mkdir -p $GOPATH/src/github.com/JeffDeCola/"
+mkdir -p "$GOPATH/src/github.com/JeffDeCola/"
 echo " "
 
+echo "cp -R ./hello-go-deploy-gae $GOPATH/src/github.com/JeffDeCola/."
+cp -R "./hello-go-deploy-gae" "$GOPATH/src/github.com/JeffDeCola/."
+echo " "
+
+echo "cd $GOPATH/src/github.com/JeffDeCola/hello-go-deploy-gae/example-03-gae"
+cd "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-gae/example-03-gae"
+echo " "
+
+echo "Check that you are set and everything is in the right place for go:"
+echo "gopath is: $GOPATH"
 echo "pwd is: $PWD"
-echo " "
-
-echo "List whats in the current directory"
 ls -la
 echo " "
 
