@@ -1,1 +1,0 @@
-ok  	github.com/JeffDeCola/hello-go-deploy-gae/example-02-gae	0.012s	coverage: 0.0% of statements
