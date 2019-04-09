@@ -1,10 +1,5 @@
 # hello-go-deploy-gae
 
-```text
-*** THE DEPLOY IS UNDER CONSTRUCTION - CHECK BACK SOON ***
-For testing the deploy, I'm using using mesos/marathon.
-```
-
 [![Go Report Card](https://goreportcard.com/badge/github.com/JeffDeCola/hello-go-deploy-gae)](https://goreportcard.com/report/github.com/JeffDeCola/hello-go-deploy-gae)
 [![GoDoc](https://godoc.org/github.com/JeffDeCola/hello-go-deploy-gae?status.svg)](https://godoc.org/github.com/JeffDeCola/hello-go-deploy-gae)
 [![Maintainability](https://api.codeclimate.com/v1/badges/dc7f5a341aed6ae341d0/maintainability)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/maintainability)
