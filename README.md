@@ -100,12 +100,28 @@ Hello, world! - Example 03
 The current count is 39
 ```
 
-### EXAMPLE 4
+### EXAMPLE 4 (USING A DOCKER IMAGE)
 
 [example-01-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-01-gae)
 is a simple hello world website docker container.
 
-tbd
+NOTE: I don't know how to run a local docker container and
+use the local app server.  And honestly, not
+that interested in doing this.
+
+Your app.yaml file will now be telling `gae` you are using
+a docker container.
+
+```yaml
+runtime: custom
+env: flex
+```
+
+`gae` will build the docker image when you deploy.  I'm not a huge fan of this.
+Hence, the Dockerfile must be in the directory you deploy in.
+
+If you want to use the local app server remember to
+use `appengine.Main()` in main.go.
 
 ## STEP 1 - TEST
 

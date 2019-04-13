@@ -54,6 +54,6 @@ func main() {
 }
 
 func handleJeff(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Hello, world! - Example 04")
+	fmt.Fprintln(w, "Hello, world! - Example 04 - Using a docker container")
 	fmt.Fprintln(w, "The current count is", counter.Result())
 }
