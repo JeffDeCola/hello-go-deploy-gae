@@ -62,7 +62,7 @@ There are a few examples in this repo.  We will deploy example example 3.
 
 ### EXAMPLE 1
 
-[example-01-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-01-gae)
+[example-01](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-01)
 is a simple hello world website.
 
 You can deploy it locally,
@@ -73,9 +73,7 @@ sh deploy-local-app-server.sh
 
 And see the webpage,
 
-```bash
 [http://localhost:8080](http://localhost:8080)
-```
 
 You can also deploy it to gae,
 
@@ -85,15 +83,15 @@ sh deploy-gae.sh
 
 ### EXAMPLE 2
 
-[example-02-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-02-gae)
+[example-02](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-02)
 is static pages using gcloud.
 
 ### EXAMPLE 3
 
-When a user click on webpage for [example-03-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03-gae),
-It will show the latest number from a counter.
+ [example-03](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03)
+ will show the latest number from a counter.
 
-For example,
+The output will look like,
 
 ```bash
 Hello, world! - Example 03
@@ -102,8 +100,8 @@ The current count is 39
 
 ### EXAMPLE 4 (USING A DOCKER IMAGE)
 
-[example-01-gae](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-01-gae)
-is a simple hello world website docker container.
+[example-04](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-04)
+deploys a docker image to gae.
 
 NOTE: I don't know how to run a local docker container and
 use the local app server.  And honestly, not
@@ -144,7 +142,7 @@ Refer to my
 for more detailed information and a nice illustration.
 
 This script is
-[example-03-gae/deploy-gae.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/gae-deploy/example-03-gae/deploy-gae.sh).
+[example-03/deploy-gae.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/gae-deploy/example-03/deploy-gae.sh).
 
 Lastly, this script runs all of the above commands in concourse
 [/ci/scripts/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/deploy.sh).
