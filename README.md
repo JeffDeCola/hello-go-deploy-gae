@@ -101,13 +101,13 @@ The current count is 39
 ### EXAMPLE 4 (USING A DOCKER IMAGE)
 
 [example-04](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-04)
-deploys a docker image to gae.
+deploys a docker image to `gae`.
 
 NOTE: I don't know how to run a local docker container and
 use the local app server.  And honestly, not
 that interested in doing this.
 
-Your app.yaml file will now be telling `gae` you are using
+Your `app.yaml` file will now be telling `gae` you are using
 a docker container.
 
 ```yaml
@@ -121,7 +121,7 @@ Hence, the Dockerfile must be in the directory you deploy in.
 If you want to use the local app server remember to
 use `appengine.Main()` in main.go.
 
-## STEP 1 - TEST
+## STEP 1 - TEST (EXAMPLE 3)
 
 Lets unit test the code,
 
@@ -130,29 +130,29 @@ go test -cover ./... | tee /test/test_coverage.txt
 ```
 
 This script runs the above command
-[/test/unit-tests.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/test/unit-tests.sh).
+[/test/unit-tests.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03/test/unit-tests.sh).
 
 This script runs the above command in concourse
 [/ci/scripts/unit-test.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/unit-tests.sh).
 
-## STEP 2 - DEPLOY (TO GAE)
+## STEP 2 - DEPLOY (TO GAE) (EXAMPLE 3)
 
 Refer to my
 [gae cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/blob/master/software/infrastructure-as-a-service/cloud-services-compute/google-cloud-platform-cheat-sheet/google-app-engine.md),
 for more detailed information and a nice illustration.
 
 This script is
-[example-03/deploy-gae.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/gae-deploy/example-03/deploy-gae.sh).
+[example-03/deploy-gae.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03/deploy-gae.sh).
 
 Lastly, this script runs all of the above commands in concourse
 [/ci/scripts/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/deploy.sh).
 
 ## CHECK THAT hello-go is RUNNING IN APP ENGINE
 
-Goto the console in gae or,
+Goto the console in `gae` or,
 
 ```bash
-gcloud app logs tail -s example-01-app
+gcloud app logs tail -s example-03
 gcloud app browse
 ```
 
