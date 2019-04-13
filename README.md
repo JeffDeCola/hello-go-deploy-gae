@@ -84,7 +84,23 @@ sh deploy-gae.sh
 ### EXAMPLE 2
 
 [example-02](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-02)
-is static pages using gcloud.
+uses static pages using gcloud.
+
+Like example-01 you can deploy it locally,
+
+```bash
+sh deploy-local-app-server.sh
+```
+
+And see the webpage,
+
+[http://localhost:8080](http://localhost:8080)
+
+You can also deploy it to gae,
+
+```bash
+sh deploy-gae.sh
+```
 
 ### EXAMPLE 3
 
@@ -98,7 +114,9 @@ Hello, world! - Example 03
 The current count is 39
 ```
 
-### EXAMPLE 4 (USING A DOCKER IMAGE)
+This example is used in my concourse scripts (optional).
+
+### EXAMPLE 4 (DEPLOY A DOCKER IMAGE TO GAE)
 
 [example-04](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-04)
 deploys a docker image to `gae`.
@@ -130,7 +148,7 @@ go test -cover ./... | tee /test/test_coverage.txt
 ```
 
 This script runs the above command
-[/test/unit-tests.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03/test/unit-tests.sh).
+[unit-tests.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03/test/unit-tests.sh).
 
 This script runs the above command in concourse
 [/ci/scripts/unit-test.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/unit-tests.sh).
@@ -138,11 +156,11 @@ This script runs the above command in concourse
 ## STEP 2 - DEPLOY (TO GAE) (EXAMPLE 3)
 
 Refer to my
-[gae cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/blob/master/software/infrastructure-as-a-service/cloud-services-compute/google-cloud-platform-cheat-sheet/google-app-engine.md),
+[gae cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/service-architectures/platform-as-a-service/google-app-engine-cheat-sheet)
 for more detailed information and a nice illustration.
 
 This script is
-[example-03/deploy-gae.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03/deploy-gae.sh).
+[deploy-gae.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/example-03/deploy-gae.sh).
 
 Lastly, this script runs all of the above commands in concourse
 [/ci/scripts/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-gae/tree/master/ci/scripts/deploy.sh).
