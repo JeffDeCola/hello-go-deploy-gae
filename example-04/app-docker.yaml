@@ -1,0 +1,5 @@
+# hello-go-deploy-gae app.yaml
+
+runtime: custom
+
+env: flex

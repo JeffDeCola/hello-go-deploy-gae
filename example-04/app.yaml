@@ -2,8 +2,6 @@
 
 runtime: go111
 
-service: example-04
-
 env: standard
 
 handlers:

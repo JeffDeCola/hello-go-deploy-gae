@@ -1,42 +1,35 @@
-#!/bin/sh -e 
-# hello-go-deploy-gae deploy-gae.sh
+#!/bin/sh -e
+# hello-go-deploy-amazon-ecs run.sh
 
 echo " "
 
 if [ "$1" = "-debug" ]
 then
     echo "************************************************************************"
-    echo "* deploy-gae.sh -debug (START) *****************************************"
+    echo "* run.sh -debug (START) ************************************************"
     echo "************************************************************************"
     # set -x enables a mode of the shell where all executed commands are printed to the terminal.
     set -x
     echo " "
 else
     echo "************************************************************************"
-    echo "* deploy-gae.sh (START) ************************************************"
+    echo "* run.sh (START) *******************************************************"
     echo "************************************************************************"
     echo " "
 fi
 
-echo "gcloud config list"
-gcloud config list
+echo "go run main.go&"
+echo " "
+go run main.go &
 echo " "
 
-echo "Make sure Dockerfile is in this directory"
-cp build-push/Dockerfile .
+echo "naub.go is running in the background"
 echo " "
-
-echo "DEPLOY APP TO GAE"
-echo " "
-echo "      gcloud app browse"
-echo "      gcloud app logs tail -s example-04-app"
-echo "      gcloud app browse -s example-04-app"
-echo '      Webpage: https://'"$GCP_JEFFS_PROJECT_ID"'.appspot.com'
-echo " "
-gcloud app deploy app-docker.yaml --stop-previous-version
+echo "      curl localhost:8080"
+echo "      Goto your local webpage: http://localhost:8080/"
 echo " "
 
 echo "************************************************************************"
-echo "* deploy-gae.sh (END) **************************************************"
+echo "* run.sh (END) **************************************************"
 echo "************************************************************************"
 echo " "
