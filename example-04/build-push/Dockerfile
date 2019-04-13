@@ -2,7 +2,7 @@
 
 FROM golang
 
-LABEL Jeff DeCola (https://github.com/JeffDeCola/hello-go-deploy-gae)
+LABEL maintainer="Jeff DeCola https://github.com/JeffDeCola/hello-go-deploy-gae"
 
 RUN cd ..
 

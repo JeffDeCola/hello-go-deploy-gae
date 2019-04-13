@@ -48,12 +48,12 @@ func main() {
 	go loopForever()
 
 	http.HandleFunc("/", handleJeff)
-	// appengine.Main()
+	//appengine.Main()
 	log.Fatal(http.ListenAndServe(":8080", nil))
 
 }
 
 func handleJeff(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Hello, world! - Example 03")
+	fmt.Fprintln(w, "Hello, world! - Example 04")
 	fmt.Fprintln(w, "The current count is", counter.Result())
 }
