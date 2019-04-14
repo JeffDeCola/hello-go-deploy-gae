@@ -23,7 +23,7 @@ echo " "
 go run main.go &
 echo " "
 
-echo "naub.go is running in the background"
+echo "main.go is running in the background"
 echo " "
 echo "      curl localhost:8080"
 echo "      Goto your local webpage: http://localhost:8080/"
