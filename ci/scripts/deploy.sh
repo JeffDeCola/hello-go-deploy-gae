@@ -21,7 +21,9 @@ echo "At start, you should be in a /tmp/build/xxxxx directory with one folder:"
 echo "   /hello-go-deploy-gae"
 echo " "
 
-echo "PRESTEPS"
+echo "------------------------------------------------------------"
+echo "PRESTEPS - AUTHENTICATE GCP ACCOUNT VIA SERVICE ACCOUNT FILE"
+echo "------------------------------------------------------------"
 echo " "
 
 echo "Note: $GCP_JEFFS_PROJECT_ID AND $GCP_JEFFS_APP_SERVICE_ACCOUNT_EMAIL_ADDRESS env variable already preset"
@@ -54,6 +56,11 @@ echo "gcloud config list"
 gcloud config list
 echo " "
 
+echo "--------------------------------------------------------------"
+echo "COMPLETED - AUTHENTICATED GCP ACCOUNT VIA SERVICE ACCOUNT FILE"
+echo "--------------------------------------------------------------"
+echo " "
+
 echo "mkdir -p $GOPATH/src/github.com/JeffDeCola/"
 mkdir -p "$GOPATH/src/github.com/JeffDeCola/"
 echo " "
@@ -76,8 +83,8 @@ echo "DEPLOY APP TO GAE"
 echo "gcloud -q app deploy app.yaml --stop-previous-version"
 echo " "
 echo "      gcloud app browse"
-echo "      gcloud app logs tail -s example-03-app"
-echo "      gcloud app browse -s example-03-app"
+echo "      gcloud app logs tail -s example-03"
+echo "      gcloud app browse -s example-03"
 echo " "
 gcloud -q app deploy app.yaml --stop-previous-version
 echo " "
