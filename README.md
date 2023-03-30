@@ -1,15 +1,18 @@
-# hello-go-deploy-gae
+# HELLO GO DEPLOY GAE
 
+[![Tag Latest](https://img.shields.io/github/v/tag/jeffdecola/hello-go-deploy-gae)](https://github.com/JeffDeCola/hello-go-deploy-gae/tags)
+[![Go Reference](https://pkg.go.dev/badge/github.com/JeffDeCola/hello-go-deploy-gae.svg)](https://pkg.go.dev/github.com/JeffDeCola/hello-go-deploy-gae)
 [![Go Report Card](https://goreportcard.com/badge/github.com/JeffDeCola/hello-go-deploy-gae)](https://goreportcard.com/report/github.com/JeffDeCola/hello-go-deploy-gae)
-[![GoDoc](https://godoc.org/github.com/JeffDeCola/hello-go-deploy-gae?status.svg)](https://godoc.org/github.com/JeffDeCola/hello-go-deploy-gae)
-[![Maintainability](https://api.codeclimate.com/v1/badges/dc7f5a341aed6ae341d0/maintainability)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/maintainability)
-[![Issue Count](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/issues)
-[![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
+[![codeclimate Maintainability](https://api.codeclimate.com/v1/badges/dc7f5a341aed6ae341d0/maintainability)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/maintainability)
+[![codeclimate Issue Count](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/issues)
+[![Docker Pulls](https://badgen.net/docker/pulls/jeffdecola/hello-go-deploy-gae?icon=docker&label=pulls)](https://hub.docker.com/r/jeffdecola/hello-go-deploy-gae/)
+[![MIT License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
+[![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
 
-`hello-go-deploy-gae` _will test, build, push (to DockerHub) and deploy
-a long running "hello-world" Docker Image to Google App Engine (gae)._
+_Deploy a "hello-world" docker image to
+Google App Engine (gae)._
 
-I also have other repos showing different deployments,
+Other Services
 
 * PaaS
   * [hello-go-deploy-aws-elastic-beanstalk](https://github.com/JeffDeCola/hello-go-deploy-aws-elastic-beanstalk)
@@ -27,12 +30,19 @@ I also have other repos showing different deployments,
   * [hello-go-deploy-azure-vm](https://github.com/JeffDeCola/hello-go-deploy-azure-vm)
   * [hello-go-deploy-gce](https://github.com/JeffDeCola/hello-go-deploy-gce)
 
-The `hello-go-deploy-gae`
-[Docker Image](https://hub.docker.com/r/jeffdecola/hello-go-deploy-gae)
-on DockerHub.
+Table of Contents
 
-The `hello-go-deploy-gae`
-[GitHub Webpage](https://jeffdecola.github.io/hello-go-deploy-gae/).
+* ???
+
+Documentation and Reference
+
+* The
+  [hello-go-deploy-gae docker image](https://hub.docker.com/r/jeffdecola/hello-go-deploy-gae)
+  on DockerHub
+* This repos
+  [github webpage](https://jeffdecola.github.io/hello-go-deploy-gae/)
+  _built with
+  [concourse](https://github.com/JeffDeCola/hello-go-deploy-gae/blob/master/ci-README.md)_
 
 ## PREREQUISITES
 
