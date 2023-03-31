@@ -1,9 +1,0 @@
-# hello-go-deploy-gae app.yaml
-
-runtime: go111
-
-env: standard
-
-handlers:
-- url: /.*
-  script: auto
