@@ -3,18 +3,14 @@
 [![Tag Latest](https://img.shields.io/github/v/tag/jeffdecola/hello-go-deploy-gae)](https://github.com/JeffDeCola/hello-go-deploy-gae/tags)
 [![Go Reference](https://pkg.go.dev/badge/github.com/JeffDeCola/hello-go-deploy-gae.svg)](https://pkg.go.dev/github.com/JeffDeCola/hello-go-deploy-gae)
 [![Go Report Card](https://goreportcard.com/badge/github.com/JeffDeCola/hello-go-deploy-gae)](https://goreportcard.com/report/github.com/JeffDeCola/hello-go-deploy-gae)
-[![codeclimate Maintainability](https://api.codeclimate.com/v1/badges/ce328e08ef7038607b16/maintainability)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/maintainability)
+[![codeclimate Maintainability](https://api.codeclimate.com/v1/badges/dc7f5a341aed6ae341d0/maintainability)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/maintainability)
 [![codeclimate Issue Count](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/issues)
 [![Docker Pulls](https://badgen.net/docker/pulls/jeffdecola/hello-go-deploy-gae?icon=docker&label=pulls)](https://hub.docker.com/r/jeffdecola/hello-go-deploy-gae/)
 [![MIT License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 [![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
 
-```text
-*** THE DEPLOY IS UNDER CONSTRUCTION - CHECK BACK SOON ***
-```
-
 _Deploy a "hello-world" docker image to
-Microsoft Azure Kubernetes Service (aks)._
+Google App Engine (gae)._
 
 Other Services
 
@@ -43,7 +39,7 @@ Table of Contents
 * [STEP 1 - TEST](https://github.com/JeffDeCola/hello-go-deploy-gae#step-1---test)
 * [STEP 2 - BUILD (DOCKER IMAGE VIA DOCKERFILE)](https://github.com/JeffDeCola/hello-go-deploy-gae#step-2---build-docker-image-via-dockerfile)
 * [STEP 3 - PUSH (TO DOCKERHUB)](https://github.com/JeffDeCola/hello-go-deploy-gae#step-3---push-to-dockerhub)
-* [STEP 4 - DEPLOY (TO AKS)](https://github.com/JeffDeCola/hello-go-deploy-gae#step-4---deploy-to-aks)
+* [STEP 4 - DEPLOY (TO GAE)](https://github.com/JeffDeCola/hello-go-deploy-gae#step-4---deploy-to-gae)
 * [CONTINUOUS INTEGRATION & DEPLOYMENT](https://github.com/JeffDeCola/hello-go-deploy-gae#continuous-integration--deployment)
 
 Documentation and Reference
@@ -87,7 +83,7 @@ go get -u -v github.com/cweill/gotests/...
   * [docker](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/operations/orchestration/builds-deployment-containers/docker-cheat-sheet)
 * SERVICES
   * [dockerhub](https://hub.docker.com/)
-  * azure kubernetes service (aks)
+  * google app engine (gae)
 
 ## RUN
 
@@ -177,7 +173,7 @@ Check the
 [hello-go-deploy-gae docker image](https://hub.docker.com/r/jeffdecola/hello-go-deploy-gae)
 at DockerHub.
 
-## STEP 4 - DEPLOY (TO AKS)
+## STEP 4 - DEPLOY (TO GAE)
 
 _Coming soon._
 
