@@ -1,4 +1,4 @@
-// hello-go-deploy-aks main.go
+// hello-go-deploy-gae main.go
 
 package main
 
