@@ -1,4 +1,4 @@
-# hello-go-deploy-aks task-deploy.yml
+# hello-go-deploy-aks task-build-push.yml
 
 platform: linux
 
@@ -12,6 +12,9 @@ image_resource:
 inputs:
   - name: hello-go-deploy-aks
 
+outputs:
+  - name: dist
+
 run:
-  path: ./hello-go-deploy-aks/ci/scripts/deploy.sh
+  path: ./hello-go-deploy-aks/ci/scripts/build-push.sh
   # args: [-debug]
