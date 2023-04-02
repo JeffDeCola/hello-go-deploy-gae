@@ -1,0 +1,25 @@
+# hello-go-deploy-gae app.yaml
+
+runtime: go111
+
+env: standard
+
+handlers:
+
+# If the path is empty, use index.html
+- url: /
+  static_files: index.html
+  upload: index.html
+
+# Otherwise, find file in static directory
+- url: /s
+  static_dir: static
+
+# Otherwise, find file on google cloud storage (gcs) bucket
+- url: /b
+  static_dir: bucket-gcs
+
+# If all else fails, you made an error
+- url: /.*
+  static_files: opps.html
+  upload: opps.html
