@@ -1,13 +1,11 @@
 # HELLO GO DEPLOY GAE
 
 [![Tag Latest](https://img.shields.io/github/v/tag/jeffdecola/hello-go-deploy-gae)](https://github.com/JeffDeCola/hello-go-deploy-gae/tags)
+[![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
+[![MIT License](https://img.shields.io/:license-mit-blue.svg)](https://jeffdecola.mit-license.org)
 [![Go Reference](https://pkg.go.dev/badge/github.com/JeffDeCola/hello-go-deploy-gae.svg)](https://pkg.go.dev/github.com/JeffDeCola/hello-go-deploy-gae)
 [![Go Report Card](https://goreportcard.com/badge/github.com/JeffDeCola/hello-go-deploy-gae)](https://goreportcard.com/report/github.com/JeffDeCola/hello-go-deploy-gae)
-[![codeclimate Maintainability](https://api.codeclimate.com/v1/badges/dc7f5a341aed6ae341d0/maintainability)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/maintainability)
-[![codeclimate Issue Count](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-gae/issues)
 [![Docker Pulls](https://badgen.net/docker/pulls/jeffdecola/hello-go-deploy-gae?icon=docker&label=pulls)](https://hub.docker.com/r/jeffdecola/hello-go-deploy-gae/)
-[![MIT License](https://img.shields.io/:license-mit-blue.svg)](https://jeffdecola.mit-license.org)
-[![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
 
 _Deploy a "hello-world" docker image to
 Google App Engine (gae)._
